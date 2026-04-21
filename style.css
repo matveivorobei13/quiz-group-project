@@ -1,0 +1,33 @@
+#greatings_div{
+    width: 300px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-evenly;
+
+}
+
+#greatings_div h1{
+    font-size: 30px;
+    color: #333;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+#greatings_div p{
+    font-size: 18px;
+    color: #666;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+#greatings_div button{
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
