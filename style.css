@@ -31,3 +31,66 @@
     border-radius: 5px;
     cursor: pointer;
 }
+
+#test_div{
+    width: 300px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+#test_div p{
+    font-size: 30px;
+    color: #333;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+#test_div button{
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #28A745;
+    width: 80%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#result_div{
+    width: 300px;
+    margin: 100px auto;
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 20px;
+}
+
+#result_div p{
+    font-size: 30px;
+    color: #333;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
+
+#result_div button{
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #DC3545;
+    width: 80%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#result_div h1{
+    font-size: 30px;
+    color: #333;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+}
