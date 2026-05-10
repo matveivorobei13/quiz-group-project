@@ -30,3 +30,71 @@ const quiz = [
     correct: 1
   }
 ];
+
+function wait(ms){
+  return new Promise((resolve, reject) => {
+     setTimeout(function(){
+            resolve()
+        }, ms)
+  })
+}
+const start=document.querySelector("#greatings_div button")
+start.addEventListener("click", async function(){
+   anime({
+    targets: "#greatings_div",
+    opacity: 0,
+    duration: 400,
+    
+  })
+  await wait(400)
+  document.querySelector("#greatings_div").style.display="none"
+
+  document.querySelector("#test_div").style.display="flex"
+  anime({
+    targets: "#test_div",
+    opacity: 1,
+    translateY: 0,
+    duration: 400,
+    
+  })
+
+})
+const question_tag = document.querySelector("#test_div p")
+
+const buttons = document.querySelectorAll("#test_div button")
+console.log(buttons)
+
+function displayQuestion(number_question) {
+      question_tag.innerHTML = quiz[number_question].question
+      buttons[0].innerHTML = quiz[number_question].answers[0]
+      buttons[1].innerHTML = quiz[number_question].answers[1]
+      buttons[2].innerHTML = quiz[number_question].answers[2]
+      buttons[3].innerHTML = quiz[number_question].answers[3]
+}
+
+let current_question = 0
+let right_answers = 0
+
+displayQuestion(current_question)
+
+for(let i=0; i === buttons.length - 1; i++){
+  buttons[i].addEventListener('click', function(){
+    if(buttons[i].innerHTML === quiz[current_question].answers[quiz[current_question].correct]){
+      right_answers++
+    }
+    if(current_question === quiz.length - 1){
+      pass
+    }
+    else{
+      current_question++
+      displayQuestion(current_question)
+    }
+  })
+}
+
+
+
+
+
+
+
